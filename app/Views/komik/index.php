@@ -14,17 +14,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $no = 1;?>
+                    <?php foreach($komik as $k) : ?>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Naruto</td>
+                        <th scope="row"><?= $no++;?></th>
+                        <td><?= $k['judul'];?></td>
                         <td>
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/94/NarutoCoverTankobon1.jpg/220px-NarutoCoverTankobon1.jpg"
-                                alt="naruto" class="sampul" />
+                            <img src="/img/<?= $k['sampul'];?>" alt="naruto" class="sampul" />
                         </td>
                         <td>
                             <a href="" class="btn btn-success">Detail</a>
                         </td>
                     </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
