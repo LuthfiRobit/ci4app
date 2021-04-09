@@ -22,7 +22,12 @@
                             </p>
 
                             <a href="" class="btn btn-warning">Edit</a>
-                            <a href="" class="btn btn-danger">Delete</a>
+                            <form action="/komik/delete/<?= $komik['id_komik']; ?>" method="post" class="d-inline">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                            <!-- <a href="" class="btn btn-danger">Delete</a> -->
                             <hr>
                             <a href="/komik">Kembali ke daftar komik</a>
                         </div>
