@@ -35,7 +35,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Pages::index');
 // $routes->get('/pages', 'Pages::about');
 // $routes->get('/komik/create', 'Komik::create');
-$routes->get('/komik/(:segment)','Komik::detail/$1');
+$routes->delete('/komik/delete/(:num)','Komik::delete/$1');
+$routes->get('/komik/(:any)','Komik::detail/$1');
 
 /*
  * --------------------------------------------------------------------
