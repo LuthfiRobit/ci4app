@@ -24,4 +24,8 @@ class KomikModel extends Model
         //$this->db->table('tb_komik')->insert($data);
         $this->db->table('tb_komik')->insert($data);
     }
+
+    // public function delete($id){
+    //     $this->db->table('tb_komik')->where('id_komik', $id)->delete();
+    // }
 }
