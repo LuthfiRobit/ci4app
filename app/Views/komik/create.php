@@ -21,21 +21,40 @@
                 <div class="form-group row">
                     <label for="penulis" class="col-sm-2 col-form-label">Penulis</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="penulis" name="penulis"
-                            value="<?= old('penulis');?>">
+                        <input type="text"
+                            class="form-control <?= ($validation->hasError('penulis')) ? 'is-invalid' : ''; ?>"
+                            id="penulis" name="penulis" value="<?= old('penulis');?>">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('penulis');?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="penerbit" class="col-sm-2 col-form-label">Penerbit</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="penerbit" name="penerbit"
-                            value="<?= old('penerbit');?>">
+                        <input type="text"
+                            class="form-control <?= ($validation->hasError('penerbit')) ? 'is-invalid' : ''; ?>"
+                            id="penerbit" name="penerbit" value="<?= old('penerbit');?>">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('penerbit');?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="sampul" class="col-sm-2 col-form-label">Sampul</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="sampul" name="sampul" value="<?= old('sampul');?>">
+                    <div class="col-sm-2">
+                        <img src="/img/default.png" class="img-thumbnail img-preview">
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="custom-file">
+                            <input
+                                class="custom-file-input <?= ($validation->hasError('sampul')) ? 'is-invalid' : ''; ?>"
+                                type="file" id="sampul" name="sampul" onchange="previewImg()">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('sampul');?>
+                            </div>
+                            <label for="sampul" class="custom-file-label">Pilih Gambar...</label>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
