@@ -21,7 +21,6 @@ class KomikModel extends Model
     }
 
     public function add($data){
-        //$this->db->table('tb_komik')->insert($data);
         $this->db->table('tb_komik')->insert($data);
     }
 
