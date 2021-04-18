@@ -21,11 +21,12 @@
                                 </small>
                             </p>
 
-                            <a href="" class="btn btn-warning">Edit</a>
-                            <form action="/komik/delete/<?= $komik['id_komik']; ?>" method="post" class="d-inline">
+                            <a href="/komik/edit/<?= $komik['slug']; ?>" class="btn btn-warning">Edit</a>
+                            <form action="/komik/<?= $komik['id_komik']; ?>" method="post" class="d-inline">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-danger"
+                                    onclick="return confirm('Apakan anda yakin menghapus data ini?');">Delete</button>
                             </form>
                             <!-- <a href="" class="btn btn-danger">Delete</a> -->
                             <hr>
