@@ -13,6 +13,7 @@
                 <a class="nav-item nav-link" href="/komik">Komik</a>
                 <a class="nav-item nav-link" href="/orang">Orang</a>
                 <a class="nav-item nav-link" href="">Contoh</a>
+                <a class="nav-item nav-link" href="">Contoh 2</a>
             </div>
         </div>
     </div>
