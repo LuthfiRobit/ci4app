@@ -179,6 +179,9 @@ class Komik extends BaseController
 		//cek ganti gambar?
 		if ($fileSampul->getError() == 4) {
 			$namaSampul = $this->request->getVar('sampulLama');
+		} else if ($this->request->getVar('sampulLama') == 'default.png'){
+			$namaSampul = $fileSampul->getRandomName();
+			$fileSampul->move('img', $namaSampul);
 		} else {
 			$namaSampul = $fileSampul->getRandomName();
 			$fileSampul->move('img', $namaSampul);
